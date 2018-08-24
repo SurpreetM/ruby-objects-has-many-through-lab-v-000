@@ -13,7 +13,7 @@ class Patient
   end
 
   def appointments
-    Appointment.all.each do |appointment|
+    Appointment.all.select do |appointment|
       appointment.patient == self
     end
   end
